@@ -87,8 +87,8 @@ template <class Data, class Key> void Minheap<Data,Key>::insert(map<Data,Key> d)
 	minHeapNode* node;
 	typename map<Data,Key>::iterator it;
 	int i=1;
-	for(it = d.begin();it!=d.end();it++) {
-		node = new minHeapNode(it->first, it->second);
+	for(it = d.begin();it != d.end(); it++) {
+		node = new minHeapNode(it -> first, it -> second);
 		this -> myArray[i] = node;
 		i++;
 	}
@@ -101,12 +101,12 @@ that its complexity of time is : O(2n)
 */
 template <class Data, class Key> void Minheap<Data,Key>::buildMinHeap() {
 	int i = this -> heapsize;
-	for(int j = i/2; j>0; j--) {
+	for(int j = i/2; j > 0; j--) {
 		this -> minHeapify(j);
 	}
 }
 template <class Data, class Key> Data Minheap<Data,Key>::minimum() const {
-	if(this->isEmpty() == false) { 
+	if(this -> isEmpty() == false) { 
 		return this -> myArray[1] -> myData;
     }
 	else { 
@@ -135,7 +135,7 @@ template <class Data, class Key> void Minheap<Data,Key>::minHeapify(int i) {
 		}
 	}
 	if(r != nullptr) {
-		if((r -> myKey)<(min -> myKey)) {
+		if((r -> myKey) < (min -> myKey)) {
 			min = r;
 			j = 2*i + 1;
 		}
@@ -159,7 +159,7 @@ template <class Data, class Key> bool Minheap<Data,Key>::checkFor(Data data,stri
 				this -> myArray[i] -> myKey = k;
 
 				//Heapify top, the heap-property is checked towards the root
-				while(i > 1 && this -> getParent(i) != nullptr && (this -> getParent(i) -> myKey)>(this -> myArray[i] -> myKey)) {
+				while(i > 1 && this -> getParent(i) != nullptr && (this -> getParent(i) -> myKey) > (this -> myArray[i] -> myKey)) {
 					minHeapNode* temp = this -> myArray[i];
 					this -> myArray[i] = this -> myArray[i/2];
 					this -> myArray[i/2] = temp;
