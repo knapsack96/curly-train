@@ -14,7 +14,7 @@ From shell: g++ -std=c++11 shortestPath.cpp -o shortestPath
 (ensure having gnu g++ compiler).
 From editor: make a project containing those files 
 in include folder and build it as an executable.
-Finally, for loading datas inside, consult the 
+Finally, in both cases, for loading datas inside, consult the 
 net_example_file for writing the right format needed
 by the program.
 */
@@ -35,7 +35,7 @@ int main()
               break;
             }
             case('a'): {
-              g -> populateGraph("InputGraphCities.txt");
+              g -> populateGraph("net_example_file");
               break;
             }
             case('b'): {
