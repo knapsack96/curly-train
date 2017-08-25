@@ -7,3 +7,5 @@ vertexA:
 firstAdjacent:weightOfTheArcWithTheFirstAdjacent:secondAdjacent:etc....
 
 The third line is blank.
+
+In priorityQueue, you can modify the inner class making redBlack taking it over (so try it as an exercise); remember to change some method's name and to verify compatibility in inheritance. Notice that redBlack needs including of redBlackNode (so include it in your libraries). 
